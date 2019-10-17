@@ -1,5 +1,5 @@
 ## Introduction to the python datetime module
-A very important aspect of any program in python is datetime. Python provides the datetime module that helps manipulate date and time and represent it in a way users can understand. When you talk about datetime,there are various components to it.
+An essential aspect of any program in python is datetime. Python provides the datetime module that helps manipulate date and time and represents it in a way users can understand. When you talk about datetime, there are various components to it.
 The datetime module consists of the following object types: 
 
 - date -holds the date
@@ -9,7 +9,7 @@ The datetime module consists of the following object types:
 
 ### How to get the current date and time
 
-As we have seen above, the datetime module is available to do this. We will start by importing the datetime class form the datetime module then use it to create a datetime object as shown below. Python provides the now() method from the datetime class which gives us the local date and time.
+As we have seen above, the datetime module is available to do this. We'll start by importing the datetime class form the datetime module then use it to create a datetime object, as shown below. Python provides the now() method from the datetime class, which gives us the local date and time.
 
 ```python
 import datetime
@@ -29,7 +29,7 @@ The result is:
 
 ### Components of datetime
 
-The datetime module can be used to obtain different versions of time. Lets look at the attributes in the datetime module. To do that we will use the dir() function
+The datetime module can be used to obtain different versions of time. Let's look at the attributes in the datetime module. To do that we are going to use the dir() function
 
 ```sh
 import datetime
@@ -39,16 +39,16 @@ attr
 ```
 
 
-In this tutorial, we  will only cover the following attributes:
+In this tutorial, we  are going to cover the following attributes:
 
-- 'date' - These are  date objects
-- datetime', - these are both date and  time  objects
-- 'time',  - these are time objects
-- 'Timedelta', this attribute covers intervals in time and is used to determine past and future dates
+- date - These are  date objects
+- datetime - these are both date and  time  objects
+- time  - these are time objects
+- timedelta -this attribute covers intervals in time and is used to determine past and future dates
 - 'Tzinfo - this attribute deals with timezones
 
 ### Get the current date in Python
-We use the date module to create or modify date objects. For example, if we want to get the local date we will go about it as follows:
+We use the date module to create or modify date objects. For example, to get the local date:
 
 ```python
 from datetime import date
@@ -63,12 +63,12 @@ The result is:
 2019-10-17
 ```
 
-The current date is represented is  2019, 10, 17 in the format( year, month day)respectively.
+The current date is 2019, 10, 17 in the format( year, month day), respectively.
 
 
 ### Get the current/local time in Python
 
-To get the current/local time, we first obtain the current date and time and then break it in to time by calling the time() method 
+To get the current/local time, we first obtain the current date and time and then break it into time by calling the time() method 
 
 ```python
 import datetime
@@ -86,7 +86,7 @@ The result is :
 
 
 ## Time delta
-Tme delta represents a  duration of time i.e a duration of date or time.  The datetime module contains the timedelta() attribute which is primarily used to perform date manipulations in python. Lets say you want to know the number of days in a certain time interval, we will first import the timedelta from the datetime modules as follows:
+Time delta represents a  duration of time i.e., a duration of date or time.  The datetime module contains the timedelta(a) attribute, which is primarily used to perform date manipulations in python. Let's say you want to know the number of days in a certain time interval, first import the timedelta from the datetime modules as follows:
 
 A timedelta object is represented as follows:
 
@@ -96,10 +96,10 @@ td_object
 datetime.timedelta(0)
 ```
 
-NB All arguments are optional and default to 0  and can be floats, integers, positives or negatives.. You can be able to perform  mathematical operations such as addition, substraction and multiplication with the timedelta class.
+NB All arguments are optional and default to 0  and can be floats, integers, positives, or negatives. You can be able to perform mathematical operations such as addition, subtraction, and multiplication with the timedelta class.
 
 ### Attributes of timedelta
-The timedelta class has 3 attributes namely:
+The timedelta class has 3 attributes, namely:
 
 - Max
 - Min
@@ -107,7 +107,7 @@ The timedelta class has 3 attributes namely:
 
 
 ### How to calculate the time difference between two dates
-Let’s look at some examples of how to get time difference. Lets say you have two datetime.date objects as shown below
+Let’s look at some examples of how to get the time difference. Let's say you have two datetime. date objects as shown below
 
 ```python
 first_date = date(2019, 10, 2)
@@ -129,19 +129,19 @@ The result is:
 ```
 
 
-Therefor the number of days between 2nd october 2019 and 30th October 2019 is 28 days.
+Therefore the number of days between 2nd October 2019 and 30th October 2019 is 28 days.
 
 
 ### How to calculate the time difference between two datetime.time objects
 
-Lets say you have two datetime.time objects as shown below
+Let's say you have two datetime. time objects as shown below
 
 ```python
 time_1 = time(2019, 10, 2)
 time_2 = time(2014, 10, 30)
 ```
 
-To obtain the difference, we will subtract the two objects as follows
+To obtain the difference, subtract the two objects as follows
 
 ``python
 time_2 - time_1
@@ -150,7 +150,7 @@ time_2 - time_1
 
 ### How to get past and future dates with timedelta
 
-Since timedelta reprsents a duration, to get any future or past date , we will add or subtract timedelta to the current date respectively. A simple equation to represent this is shown below.
+Since timedelta represents a duration, to get any future or past date, you add or subtract timedelta to the current date, respectively. A simple equation to represent this is shown below.
 
 ```python
 import datetime
@@ -162,7 +162,7 @@ future_date =  datetime.datetime.today() – datetime.timedelta(days=n)
 
 where n represents the number of days in integers
 
-If we want to get the date for the past 2 weeks ie. 14 days, we will substract 14 from the current date
+If we want to get the date for the past 2 weeks, i.e., 14 days, you subtract 14 from the current date
 
 ```python
 import datetime
@@ -170,13 +170,13 @@ past_date =  datetime.datetime.today() - datetime.timedelta(days=14)
 print(past_date)
 ```
 
-The result will be:
+The result is:
 
 ```sh
 2019-10-03 18:38:04.733042
 ```
 
-Lets say we want to practice a certain skill for 21 days, to get our future date we will add 21 days to the current date as shown below.
+Let's say we want to practice a particular skill for 21 days, to get the future date you add 21 days to the current date as shown below.
 
 ```python
 import datetime
@@ -192,9 +192,9 @@ print(future_date)
 
 
 ## Time Zones
-So far, we have been dealing with datetime without any consideration of factors such as timezones or daylight savings. Before we dive in further, let’s get to understand the difference between naive and aware dates. Naive dates and times usually don’t have any information that can determine things like timezones or daylight savings, They are however easier to work with because they are less complex. Aware dates and times, on the other hand, have enough information to determine their timezones and keep track of daylight savings
+So far, we have been dealing with datetime without any consideration of factors such as timezones or daylight savings. Before we dive in further, let’s get to understand the difference between naive and aware dates. Naive dates and times usually don’t have any information that can determine things like timezones or daylight savings; They are, however, easier to work with because they are less complicated. Aware dates and times, on the other hand, have enough information to determine their timezones and keep track of daylight savings
 
-Lets look at how you write a simple aware datetime
+Let's look at how you write a simple aware datetime
 
 
 ```python
@@ -203,10 +203,10 @@ dt_now = datetime.datetime.utcnow()
 print(dt_now)
 ```
 
-The simple program shows a naive datetime object. If you wish to make it an ware datetime you have to explicitly factor in a timezone.
-So how can we add information about timezones in our datetime objects. The python datetime library does not have any module available for that but we can still use other libararies to add timezone information. One such library is the pytz library.
+The simple program shows a naive datetime object. If you wish to make it an aware datetime, you have to explicitly factor in a timezone.
+So how can we add information about timezones in our datetime objects? The Python datetime library does not have any module available to work with timezones; we can still use other libraries to add timezone information. One such library is the pytz library.
 
-Suppose we want to get the current time in Nairobi city, we will need to explicitly use the specific timezone in our program. In order to get the timezone in Nairobi, we can use pytz to get all the possible timezones.
+Suppose you want to get the current time in Nairobi city, you will need to use the specific timezone in our program explicitly. To get the timezone in Nairobi, you can use pytz to get all the possible timezones.
 
 ```sh
 import pytz
@@ -226,7 +226,7 @@ print(dt_nairobi)
 ```
 
 
-The result will be:
+The result is:
 ```sh
 2019-10-17 10:40:33.592608+03:00
 ``
@@ -241,7 +241,7 @@ dt_berlin =datetime.datetime.now(tz_berlin)
 print(dt_berlin)
 ```
 
-The result will be:
+The result is:
 ```sh
 2019-10-17 09:40:33.614581+02:00
 ```
@@ -253,7 +253,7 @@ As you can see, different cities have different timezones even though the dates 
 
 GMT is the official timezone used in some countries in Europe and Africa. Time is displayed in 24-hour 0r 12-hour format or both. GMT is used to set the local time. For example, in our case above the local time in Berlin is 2019-10-17 09:40:33.614581+02:00 GMT while in Nairobi it is 2019-10-17 10:40:33.592608+03:00 GMT
 
-DST(day light saving ) Countries which have summer  change from daylight saving to summer time to make evening daylight to  last longer. During DST,  these countries turn their clocks forward an hour and revert to standard time during the fall.
+DST(day light saving )- Countries that have summer change from daylight saving to summer time to make evening daylight to last longer. During DST,  these countries turn their clocks forward an hour and revert to standard time during the fall.
 
 . 
 UTC (Coordinated Universal Time ) is a time standard for timezones worldwide. UTC is used to keep time synchronized across the world and acts as a reference point for all timezones.
@@ -262,7 +262,7 @@ UTC (Coordinated Universal Time ) is a time standard for timezones worldwide. UT
 Working with timezones can be a very tedious task
 
 ### Converting timezones
-The first thing to keep  in mind when making tomezone conversions is to ensure all the time attributes you intend to work with are in UTC. Suppose you want to convert the following timezone to America/New_York timezone
+The first thing to keep in mind when making timezone conversions is to ensure all the time attributes you intend to work with are in UTC. Suppose you want to convert the following timezone to America/New_York timezone
 
 ```python
 import datetime 
@@ -279,7 +279,7 @@ print(timezone_newyork_obj.tzinfo)
 
 ```
 
-The result will be:
+The result is:
 
 ```sh
 2018-06-29 17:08:00-04:00
@@ -295,9 +295,9 @@ Python ```strptime()```is a method in the datetime module, and its syntax is:
 dateobj =datetime.strptime(date_string,format) 
 ```
 
-where the arguments are  strings and mandatory.
+date_string, format arguments are strings and mandatory.
 
-The datetime module has a number of methods such as the ```strptime()```  method, which can be used to manipulate dates. Suppose we want to represent today's date (10/17/2019) into a date object. 
+The datetime module has several methods, such as the ```strptime()```  method, which can be used to manipulate dates. Suppose we want to represent today's date (10/17/2019) into a date object. 
 
 ```python
 import datetime
@@ -306,13 +306,13 @@ date_obj = datetime.datetime.strptime(date_string, '%m/%d/%y')
 print(date_obj)
 ```
 
-The result will be:
+The result is:
 ```sh
 2019-10-17 00:00:00
 ```
 
 ### Examples of string to datetime object with strptime
-Suppose we have a datetime string represented as ‘10/17/19 15:02:34’ and we woud like to convert in to a datetime object.
+Suppose you have a datetime string represented as ‘10/17/19 15:02:34’, and you would like to convert into a datetime object.
 
 ```python
 from datetime import datetime
@@ -321,7 +321,7 @@ datetime_obj = datetime.strptime(datetime_string, '%m/%d/%y %H:%M:%S')
 print(datetime_obj)
 ```
 
-The result will be:
+The result is:
 
 ```sh
 2019-10-17 13:08:45
@@ -342,7 +342,7 @@ time_string = datetime_object.strftime(format_string[,time_object])
 ```
 
 ### Examples of datetime to string with strftime()
-Suppose we wish to convert the current datetime in to a string?. How do we go about it?. We fist get the datetime object representation of the current datetime and call the strftime() method on the object.
+Suppose we wish to convert the current datetime into a string?. How do we go about it?. We fist get the datetime object representation of the current datetime and call the strftime() method on the object.
 
 ```python
 import datetime
@@ -351,7 +351,7 @@ current_date_string = current_date.strftime('%m/%d/%y %H:%M:%S')
 print(current_date_string)
 ```
 
-The result will be:
+The result is:
 
 ```sh
 10/17/19 16:35:49
@@ -359,7 +359,7 @@ The result will be:
 
 ## Other python datetime libraries
 
-Python has other libaries that make manipulation of datetimes much easier. Some of them have timezones hence reducing the complexity associated with timezones. Lets look at them below.
+Python has other libraries that make manipulation of date-times much easier. Some of them have timezones hence reducing the complexity associated with timezones. Let's look at them below.
 
 ### Arrow
 Arrow is also another powerful python module that makes it easy to create, manipulate, and format dates and times. It is available via pip, and you can  install it as follows:
@@ -434,12 +434,12 @@ The result will be:
 2010-10-17 00:00:00
 ```
 
-As you can see, you dont need any regular expression to determine the format; the parser will look for recognizable tokens and then guess where it belongs. If it doent, then it will throw an error.
+As you can see, you dont need any regular expression to determine the format; the parser looks for recognizable tokens and then guess where it belongs. If it doesn't, then it throws an error.
 
 ## Important points to keep in mind
-Lets look at some of the best practices to keep in mnd when working with timezones in python.
+Let's look at some of the best practices to keep in mind when working with timezones in python.
 
-- It is recommended to always work with UTC s this eliminates the need for timezones which can make the process very complicated.
+- It is recommended to always work with UTC s this eliminates the need for timezones, which can make the process very complicated.
 
 ## Conclusion
 
