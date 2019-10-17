@@ -286,11 +286,6 @@ The result will be:
 America/New_York
 ```
 
-
-
-
-
-
 ### Other Practical examples
 
 ## How to convert strings into datetime
@@ -401,16 +396,20 @@ print(dt.time())
 ```
 
 The result is:
+```python
 import maya
  
 dt = maya.parse('2018-04-29T17:45:25Z').datetime()
 print(dt.date())
 print(dt)
 print(dt.time())
+```
 
 
-Dateutil
+### Dateutil
 dateutil is a powerful library that can be used to parse dates and times in python in a variety of formats. See the examples below.
+
+```python
 
 from dateutil import parser
 dt_obj = parser.parse('Thu Oct 17 17:10:28 2019')
@@ -424,15 +423,25 @@ print(dt_obj2)
  
 t_obj=parser.parse('10/17/2019')
 print(t_obj)
+```
 
 The result will be:
 
+```sh
 2019-10-17 17:10:28
 2019-10-17 17:10:00
 2019-10-17 17:10:28
 2010-10-17 00:00:00
+```
 
 As you can see, you dont need any regular expression to determine the format; the parser will look for recognizable tokens and then guess where it belongs. If it doent, then it will throw an error.
+
+## Important points to keep in mind
+Lets look at some of the best practices to keep in mnd when working with timezones in python.
+
+- It is recommended to always work with UTC s this eliminates the need for timezones which can make the process very complicated.
+
+## Conclusion
 
 
 
