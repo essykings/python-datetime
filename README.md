@@ -7,7 +7,7 @@ The datetime module consists of the following object types:
 - datetime -holds both date and time
 
 
-### How to get the current date and time
+### How to get the current datetime
 
 As we have seen above, the datetime module is available to do this. We'll start by importing the datetime class form the datetime module then use it to create a datetime object, as shown below. Python provides the now() method from the datetime class, which gives us the local date and time.
 
@@ -106,8 +106,8 @@ The timedelta class has 3 attributes, namely:
 - resolution
 
 
-### How to calculate the time difference between two dates
-Let’s look at some examples of how to get the time difference. Let's say you have two datetime. date objects as shown below
+### Calculate the time difference between two dates
+Let’s look at  examples of how to get the time difference. Let's say you have two datetime. date objects as shown below
 
 ```python
 first_date = date(2019, 10, 2)
@@ -434,10 +434,10 @@ The result will be:
 2010-10-17 00:00:00
 ```
 
-As you can see, you dont need any regular expression to determine the format; the parser looks for recognizable tokens and then guess where it belongs. If it doesn't, then it throws an error.
+As you can see, you dont need any regular expression to determine the format; the parser looks for recognizable tokens and then guess where it belongs. If it doesn't recognize any token, then it throws an error.
 
 ## Important points to keep in mind
-Let's look at some of the best practices to keep in mind when working with timezones in python.
+Some useful tips  to keep in mind when working with timezones in python are:
 
 - It is recommended to always work with UTC s this eliminates the need for timezones, which can make the process very complicated.
 
