@@ -100,9 +100,12 @@ The result is:
 We first import the datetime module, then create an instance of the time class (which is a time object). We then set it equal to datetime.time(8,48,45), where the parameters 8,48,45 represents the hour, and seconds respectively.
 
 To create a date object, we pass the desired date in the following syntax:
-datetime.datetime(year,month,day))
-Consider the following example
 
+```python
+datetime.datetime(year,month,day))
+```
+
+Consider the following example
 
 
 ```python
@@ -119,15 +122,8 @@ The result is:
 
 
 
-
-
-
-
-
-
 ## Time delta
-Time delta represents a duration of time, i.e., a duration of date or time. The datetime module contains the timedelta(a) attribute, which is primarily used to perform date manipulations in python. Let's say you want to know the number of days in a certain time interval, first import the timedelta from the datetime modules as follows:
-
+Time delta represents a duration, i.e., a duration of date or time. The datetime module contains the timedelta() attribute, which is used to perform date manipulations in python. 
 A timedelta object is represented as follows:
 
 ```sh
