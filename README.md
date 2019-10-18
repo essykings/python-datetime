@@ -1,4 +1,4 @@
-## Introduction to the python datetime module
+# Demystifying the datetime module in Python with examples
 An essential aspect of any program in python is datetime. Python provides the datetime module that helps manipulate date and time and represents it in a way users can understand. When you talk about datetime, there are various components to it.
 The datetime module consists of the following object types: 
 
