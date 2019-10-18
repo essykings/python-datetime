@@ -21,7 +21,7 @@ print(dt_object)
 
 The result is:
 
-```sh
+```console
 2019-10-17 16:13:43.300953
 ```
 
@@ -37,7 +37,7 @@ print(current_date)
 
 
 The result is:
-```sh
+```console
 2019-10-17
 ```
 
@@ -57,7 +57,7 @@ print(local_time)
 
 The result is :
 
-```sh
+```console
 16:19:48.809945
 ```
 
@@ -66,7 +66,7 @@ The result is :
 
 The datetime module can be used to obtain different versions of time. Let's look at the attributes in the datetime module. To do that, we are going to use the dir() function.
 
-```sh
+```console
 import datetime
 attr = dir(datetime)
 attr
@@ -94,7 +94,7 @@ timeobj= datetime.time(8,48,45)
 print(timeobj)
 ```
 The result is:
-```sh
+```console
 08:48:45
 ```
 We first import the datetime module, then create an instance of the time class (which is a time object). We then set it equal to datetime.time(8,48,45), where the parameters 8,48,45 represents the hour, and seconds respectively.
@@ -115,7 +115,7 @@ print(date_object)
 ```
 The result is:
 
-```sh
+```console
 2019-10-17 00:00:00
 ```
 
@@ -126,7 +126,7 @@ The result is:
 Time delta represents a duration, i.e., a duration of date or time. The datetime module contains the timedelta() attribute, which is used to perform date manipulations in python. 
 A timedelta object is represented as follows:
 
-```sh
+```console
 td_object =timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
 td_object
 datetime.timedelta(0)
@@ -153,7 +153,7 @@ print(delta)
 ```
 The result is:
 
-```sh
+```console
 28 days,0:00:00
 ```
 
@@ -205,7 +205,7 @@ print(past_date)
 
 The result is:
 
-```sh
+```console
 2019-10-03 18:38:04.733042
 ```
 
@@ -218,7 +218,7 @@ print(future_date)
 ```
 The result is:
 
-```sh
+```console
 2019-11-07 18:39:11.019086
 ```
 
@@ -238,7 +238,7 @@ print 'today > next_week:', today > next_week
 ```
 The result is:
 
-```sh
+```console
 now < next_hour: True
 today > next_week: False
 ```
@@ -276,7 +276,7 @@ So how can we add information about timezones in our datetime objects? The Pytho
 
 Suppose you want to get the current time in Nairobi city, you will need to use the specific timezone in our program explicitly. To get the timezone in Nairobi, you can use pytz to get all the possible timezones.
 
-```sh
+```console
 import pytz
 pytz.all_timezones
 ['Africa/Abidjan', 'Africa/Accra', 'Africa/Addis_Ababa', 'Africa/Algiers', 'Africa/Asmara', 'Africa/Asmera', 'Africa/Bamako', 'Africa/Bangui', 'Africa/Banjul', 'Africa/Bissau', 'Africa/Blantyre', 'Africa/Brazzaville', 'Africa/Bujumbura', 'Africa/Cairo', 'Africa/Casablanca', 'Africa/Ceuta', 'Africa/Conakry', 'Africa/Dakar', 'Africa/Dar_es_Salaam', 'Africa/Djibouti', 'Africa/Douala', 'Africa/El_Aaiun', 'Africa/Freetown', 'Africa/Gaborone', 'Africa/Harare', 'Africa/Johannesburg', 'Africa/Juba', 'Africa/Kampala', 'Africa/Khartoum', 'Africa/Kigali', 'Africa/Kinshasa', 'Africa/Lagos', 'Africa/Libreville', 'Africa/Lome', 'Africa/Luanda', 'Africa/Lubumbashi', 'Africa/Lusaka', 'Africa/Malabo', 'Africa/Maputo', 'Africa/Maseru', 'Africa/Mbabane', 'Africa/Mogadishu', 'Africa/Monrovia', 'Africa/Nairobi']
@@ -295,7 +295,7 @@ print(dt_nairobi)
 
 
 The result is:
-```sh
+```console
 2019-10-17 10:40:33.592608+03:00
 ```
 
@@ -310,7 +310,7 @@ print(dt_berlin)
 ```
 
 The result is:
-```sh
+```console
 2019-10-17 09:40:33.614581+02:00
 ```
 
@@ -338,7 +338,7 @@ print(timezone_newyork_obj.tzinfo)
 
 The result is:
 
-```sh
+```console
 2018-06-29 17:08:00-04:00
 America/New_York
 ```
@@ -391,7 +391,7 @@ current_dt = datetime.datetime.now()
 print(current_dt)
 ```
 #### result
-```sh
+```console
 2019-10-18 20:40:38.115945
 ```
 
@@ -407,7 +407,7 @@ print(date_obj)
 ```
 
 The result is:
-```sh
+```console
 2019-10-17 00:00:00
 ```
 
@@ -426,7 +426,7 @@ print(datetime_obj)
 
 The result is:
 
-```sh
+```console
 2019-10-17 13:08:45
 ```
 
@@ -478,7 +478,7 @@ print(date_object)
 
 The result is:
 
-```sh
+```console
 2019-10-17 21:00:00
 ```
 
@@ -493,7 +493,7 @@ print(type(date_object))
 print(date_object) 
 ```
 The result is:
-```sh
+```sconsole
 <type 'datetime.date'>
 2019-10-17
 ```
@@ -526,7 +526,7 @@ print(current_date_string)
 
 The result is:
 
-```sh
+```console
 10/17/19 16:35:49
 ```
 
@@ -545,7 +545,7 @@ print('Current Time : ', dt_string)
 ```
 The result is:
 
-```sh
+```console
 ('Current Time : ', '18-Oct-2019 (11:35:50.665100)')
 ``
 #### Example 2:
@@ -558,7 +558,7 @@ dt_string = dt_obj.strftime("%H:%M:%S.%f - %b %d %Y")
 print('Current Time : ', dt_string)
 ```
 The result is:
-```sh
+```console
 ('Current Time : ', '11:41:15.575942 - Oct 18 2019')
 ```
 
@@ -578,7 +578,7 @@ Python has other libraries that make manipulation of date-times much easier. Som
 ### Arrow
 Arrow is also another powerful python module that makes it easy to create, manipulate, and format dates and times. It is available via pip, and you can install it as follows:
 
-```sh
+```console
 sudo pip3 install arrow
 ```
 
@@ -592,7 +592,7 @@ print(current_time.to('UTC'))
 ```
 
 The result is:
-```sh
+```console
 2019-10-17T15:52:58.921198+00:00
 2019-10-17T15:52:58.921198+00:00
 ```
@@ -610,13 +610,10 @@ print(dt.time())
 ```
 
 The result is:
-```python
-import maya
- 
-dt = maya.parse('2018-04-29T17:45:25Z').datetime()
-print(dt.date())
-print(dt)
-print(dt.time())
+```console
+2019-10-17
+2019-10-17 17:45:25+00:00
+17:45:25
 ```
 
 
@@ -641,7 +638,7 @@ print(t_obj)
 
 The result will be:
 
-```sh
+```console
 2019-10-17 17:10:28
 2019-10-17 17:10:00
 2019-10-17 17:10:28
@@ -653,18 +650,18 @@ As you can see, you dont need any regular expression to determine the format; th
 ## Important points to keep in mind
 Let's look at some of the best practices to keep in mind when working with timezones in python.
 
-- It is recommended to always work with UTC s this eliminates the need for timezones, which can make the process very complicated.
-- When working with dates and times, only use UTC.
+- It is recommended to always work with UTC s this eliminates the need for timezones, which is prone to errors due to time difference in different regions
+- When working with dates and times, always use UTC.
 - You should only convert datetimes to local time when displaying to the user.
 
 
 ## Conclusion
-There are very many scenarios where you will work with date and time in real-world applications. For example when you need to in 
+There are very many scenarios where you will work with date and time in real-world applications. For example:
 
-- schedule a script to run at some particular timings
-- filtering date from particular days
-- extracting data from certain APIs at specific times every day and so on
-- applications that keep track of events, appointments or bookings
+- when you want to schedule a script to run at some particular timings
+- when filtering date from particular days
+- when extracting data from certain APIs at specific times every day
+- in applications that keep track of events, appointments or bookings and so on.
 
 
 
