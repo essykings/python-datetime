@@ -163,17 +163,21 @@ Therefore the number of days between 2nd October 2019 and 30th October 2019 is 2
 
 ### How to calculate the time difference between two datetime.time objects
 
-Let's say you have two datetime. time objects as shown below
+You cannot perform manipulations of time objects with tmedelta and  the following code will result in an error
 
 ```python
-time_1 = time(2019, 10, 2)
-time_2 = time(2014, 10, 30)
-```
+from datetime import datetime, timedelta
 
-To obtain the difference, subtract the two objects as follows.
+current_datetime = datetime.now()
+current_time = current_datetime.time()
+print('Current Time:', current_time)
+tm_after_1_hr = current_time + timedelta(hours=1)
+print(tm_after_1_hr)
+```
+So the error will be:
 
 ``python
-time_2 - time_1
+tTypeError: unsupported operand type(s) for +: 'datetime.time' and 'datetime.timedelta'
 ``
 
 
@@ -250,11 +254,10 @@ So far, we have been dealing with datetime without any consideration of factors 
 
 ### Difference between DST, GMT, and UTC
 
-GMT is the official timezone used in some countries in Europe and Africa. Time is displayed in 24-hour 0r 12-hour format or both. GMT is used to set the local time. For example, in our case above the local time in Berlin is 2019-10-17 09:40:33.614581+02:00 GMT while in Nairobi it is 2019-10-17 10:40:33.592608+03:00 GMT
+GMT is the official timezone used in some countries in Europe and Africa. Time is displayed in 24-hour, 12-hour format or both. GMT is used to set the local time. For example, in our case above the local time in Berlin is 2019-10-17 09:40:33.614581+02:00 GMT while in Nairobi it is 2019-10-17 10:40:33.592608+03:00 GMT
 
 DST(day light saving )- Countries that have summer change from daylight saving to summer time to make evening daylight to last longer. During DST, these countries turn their clocks forward an hour and revert to standard time during the fall.
-
-. 
+ 
 UTC (Coordinated Universal Time ) is a time standard for timezones worldwide. UTC is used to keep time synchronized across the world and acts as a reference point for all timezones.
 
 
@@ -294,7 +297,7 @@ print(dt_nairobi)
 The result is:
 ```sh
 2019-10-17 10:40:33.592608+03:00
-``
+```
 
 What about the city of Berlin
 
