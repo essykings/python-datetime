@@ -7,7 +7,7 @@ The datetime module consists of the following object types:
 - datetime -holds both date and time
 
 
-### How to get the current date and time
+### How to get current date and time
 
 As we have seen above, the datetime module is available to do this. We'll start by importing the datetime class form the datetime module then use it to create a datetime object, as shown below. Python provides the now() method from the datetime class, which gives us the local date and time.
 
@@ -74,7 +74,7 @@ attr
 ```
 
 
-In this tutorial, we are going to cover the following attributes:
+In this tutorial, we will to cover the following attributes:
 
 - date - These are date objects
 - datetime - these are both date and time objects
@@ -105,7 +105,7 @@ To create a date object, we pass the desired date in the following syntax:
 datetime.datetime(year,month,day))
 ```
 
-Consider the following example
+Consider the following example.
 
 
 ```python
@@ -163,7 +163,7 @@ Therefore the number of days between 2nd October 2019 and 30th October 2019 is 2
 
 ### How to calculate the time difference between two datetime.time objects
 
-You cannot perform manipulations of time objects with tmedelta and  the following code will result in an error
+You cannot perform manipulations of time objects with timedelta and  the following code results in an error
 
 ```python
 from datetime import datetime, timedelta
@@ -250,11 +250,11 @@ today > next_week: False
 
 
 ## Time Zones
-So far, we have been dealing with datetime without any consideration of factors such as timezones or daylight savings. Before we dive in further, let’s get to understand the difference between naive and aware dates. Naive dates and times don’t have any information that can determine things like timezones or daylight savings; They are, however, easier to work with because they are less complicated. Aware dates and times, on the other hand, have enough information to determine their timezones and keep track of daylight savings
+So far, we have been dealing with datetime without any consideration of factors such as timezones or daylight savings. Before we dive in further, let’s get to understand the difference between naive and aware dates. Naive dates and times don’t have any information that can determine things like timezones or daylight savings; They are, however, easier to work with because they are less complicated. Aware dates and times, on the other hand, have enough information to determine their timezones and keep track of daylight savings.
 
 ### Difference between DST, GMT, and UTC
 
-GMT is the official timezone used in some countries in Europe and Africa. Time is displayed in 24-hour, 12-hour format or both. GMT is used to set the local time. For example, in our case above the local time in Berlin is 2019-10-17 09:40:33.614581+02:00 GMT while in Nairobi it is 2019-10-17 10:40:33.592608+03:00 GMT
+GMT is the official timezone used in some countries in Europe and Africa. Time is displayed in 24-hour, 12-hour format, or both. GMT is used to set the local time. For example, in our case above the local time in Berlin is 2019-10-17 09:40:33.614581+02:00 GMT while in Nairobi it is 2019-10-17 10:40:33.592608+03:00 GMT
 
 DST(day light saving )- Countries that have summer change from daylight saving to summer time to make evening daylight to last longer. During DST, these countries turn their clocks forward an hour and revert to standard time during the fall.
  
@@ -274,7 +274,7 @@ print(dt_now)
 The simple program shows a naive datetime object. If you wish to make it an aware datetime, you have to explicitly factor in a timezone.
 So how can we add information about timezones in our datetime objects? The Python datetime library does not have any module available to work with timezones; we can still use other libraries to add timezone information. One such library is the pytz library.
 
-Suppose you want to get the current time in Nairobi city, you will need to use the specific timezone in our program explicitly. To get the timezone in Nairobi, you can use pytz to get all the possible timezones.
+Suppose you want to get the current time in Nairobi city, you  need to use the specific timezone in our program explicitly. To get the timezone in Nairobi, you can use pytz to get all the possible timezones.
 
 ```console
 import pytz
@@ -661,7 +661,7 @@ There are very many scenarios where you will work with date and time in real-wor
 - when you want to schedule a script to run at some particular timings
 - when filtering date from particular days
 - when extracting data from certain APIs at specific times every day
-- in applications that keep track of events, appointments or bookings and so on.
+- in applications that keep track of events, appointments, or bookings, e.t.c.
 
 
 
